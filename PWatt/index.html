@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cadastro.com</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="forms.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Cadastrar usuário</h1>
+
+        <label for="email">
+          <span>Login</span>
+          <input type="email" id="nome" name="email" />
+          <p id="campo" style="color: red; display: none">Campo obrigatório!</p>
+        </label>
+
+        <label for="password" id="senha">
+          <span>Senha</span>
+          <input type="password" id="password" />
+          <i class="bi bi-eye" id="eyeOpen" onclick="PasswordView()"></i>
+          <i
+            class="bi bi-eye-slash"
+            id="eyeclosed"
+            onclick="PasswordView()"
+          ></i>
+        </label>
+
+        <input
+          type="submit"
+          value="Cadastrar"
+          id="button"
+          onclick="NovoUsuario()"
+        />
+      </div>
+    </main>
+
+    <section class="images">
+      <div class="circle"></div>
+      <div class="circle2"></div>
+    </section>
+  </body>
+</html>

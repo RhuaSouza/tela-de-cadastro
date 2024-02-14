@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1b2029;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  color: #8880fe;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .container label {
+  display: flex;
+  flex-direction: column;
+}
+
+main .container label span {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+input {
+  background: #161923;
+  width: 300px;
+  height: 50px;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  color: rgba(166, 166, 166);
+  font-size: 1rem;
+  border: 1px solid #040b18;
+  border-radius: 8px;
+}
+#senha {
+  position: relative;
+}
+#eyeOpen {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+#eyeclosed {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+#togglePass {
+  width: 90px;
+  cursor: pointer;
+}
+
+main .container input[type="submit"] {
+  cursor: pointer;
+  width: 50%;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 32px;
+  background: #6c63ff;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.container input[type="submit"]:hover {
+  background: #625bcd;
+  box-shadow: rgba(94, 70, 211, 0.25) 0px 54px 55px,
+    rgba(94, 70, 211, 0.25) 0px -12px 30px, rgba(94, 70, 211, 0.25) 0px 4px 6px,
+    rgba(94, 70, 211, 0.25) 0px 12px 13px, rgba(94, 70, 211, 0.25) 0px -3px 5px;
+}
+
+section .circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #8880fe;
+  clip-path: circle(40% at right 80%);
+  z-index: -1;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  section .circle {
+    clip-path: circle(35% at right 80%);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  main h1 {
+    font-size: 2rem;
+  }
+  main form label span,
+  main input[type="submit"] {
+    font-size: 1rem;
+  }
+}
